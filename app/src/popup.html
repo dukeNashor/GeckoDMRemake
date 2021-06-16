@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>geckoDM</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="popup.js"/>
+	  <script src="./scripts/jquery.min.js"></script>
+    <!-- <script src="./scripts/bootstrap.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="./scripts/material.min.css">
+    <script src="./scripts/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <img src="./images/geckodm.png" width="100%"></img> <br/>
+      </div>
+    </div>
+    <div class="mdl-layout__content container-fluid" id="main">
+      <h5 id="invalidMsg" style="display: block; text-align: center" hidden>
+        Invalid Site Detected. Please visit the Echo360 Cloud Site <br>
+        <a class="mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect" href="https://echo360.org.au"
+          target="_blank">
+          Go to Echo360.org.au
+        </a> <br> <br>
+        <i style="font-size: 14px">This extension currently does not support any other version other than Echo360 Cloud (2017 version)</i>
+        
+      </h5>
+      <div id="mainBlock">
+        <div class="checkbox">
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="downloadHD">
+            <input type="checkbox" id="downloadHD" class="mdl-checkbox__input">
+            <span class="mdl-checkbox__label">Download in HD?</span>
+          </label>
+        </div>
+        <button class="mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect" id="load">Load lectures on page</button>
+        <div class="form-group">
+          Select lecture(s) to download.
+          <div id="info" class="icon material-icons">info</div>
+          <div class="mdl-tooltip" data-mdl-for="info">
+            You can <strong>use Ctrl or Shift</strong> to select multiple lectures to download at the same time.
+          </div>
+          <select multiple class="form-control" id="lectureSelect">
+          </select>
+          <i style="font-size: 14px">
+            We recommend you to download up to 3-4 lectures at a time to prevent a timeout issue
+          </i>
+        
+        </div>
+
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="download">Download</button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="optionsBtn" >
+          <i class="material-icons">settings</i>
+          Configure geckoDM
+        </button>
+        <i style="color: gray" >Copyright &copy; 2017 geckoDM | Version: <span id="versionLabel"></span></i>
+
+      </div>
+    </div>
+  </body>
+</html>
