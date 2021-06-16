@@ -2,7 +2,8 @@
 <div>
 	<img src="/images/qtpi.png" width="100" >
 </div>
-Making Echo360 great again
+
+**This is an updated version of GeckoDM (https://github.com/GeckoDM/GeckoDownloadManager) to support new version of Echo360.**
 
 <https://geckodm.github.io>
 
